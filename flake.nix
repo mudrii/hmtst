@@ -18,7 +18,12 @@
         username = "mudrii";
         stateVersion = "21.05";
         configuration = { config, lib, pkgs, ... }:
-        {
+       	let
+          overlay-unstable = final: prev: {
+            unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+          };
+        in {
+	      nixpkgs.overlays = [ overlay-unstable ];
           nixpkgs.config = { allowUnfree = true; };
           programs.home-manager.enable = true;
 /*
@@ -27,7 +32,8 @@
           ];
 */
           home.packages = with pkgs; [
-	   tmux
+            tmux
+            unstable.kind
           ];
         };
       };
