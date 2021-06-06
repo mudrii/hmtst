@@ -31,6 +31,6 @@ cd ~/.config/nixpkgs
 
 nix flake update
 
-home-manager switch --flake ".#nixtst"
+home-manager switch --flake ".#mudrii"
 ```
 
