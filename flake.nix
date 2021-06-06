@@ -12,7 +12,7 @@
   #outputs = {self, ... }@inputs:
   {
     homeConfigurations = {
-      nixtst = inputs.home-manager.lib.homeManagerConfiguration {
+      mudrii = inputs.home-manager.lib.homeManagerConfiguration {
         system = "x86_64-linux";
         homeDirectory = "/home/mudrii";
         username = "mudrii";
