@@ -23,7 +23,7 @@ git clone https://github.com/mudrii/hmtst.git ~/.config/nixpkgs
 
 nix flake update ~/.config/nixpkgs
 
-home-manager switch --flake ~/.config/nixpkgs#nixtst
+home-manager switch --flake ~/.config/nixpkgs/#nixtst
 
 # or
 
