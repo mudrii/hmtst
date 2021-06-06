@@ -4,11 +4,12 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:nix-community/home-manager/release-21.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
-
-  outputs = {self, ... }@inputs:
+  outputs = inputs@{self, nixpkgs, nixpkgs-unstable, home-manager, ... }:
+  #outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
+  #outputs = {self, ... }@inputs:
   {
     homeConfigurations = {
       nixtst = inputs.home-manager.lib.homeManagerConfiguration {
@@ -26,7 +27,6 @@
           ];
 */
           home.packages = with pkgs; [
-	   terraform
 	   tmux
           ];
         };
