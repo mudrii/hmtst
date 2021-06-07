@@ -27,11 +27,10 @@
               nixpkgs.overlays = [ overlay-unstable ];
               nixpkgs.config = { allowUnfree = true; };
               programs.home-manager.enable = true;
-              /*
-                imports = [
-                ./modules/system-management/index.nix
+              imports = [
+                ./home.nix
+                #./modules/system-management/index.nix
                 ];
-              */
               home.packages = with pkgs; [
                 tmux
               ];
