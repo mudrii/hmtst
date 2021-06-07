@@ -33,7 +33,6 @@
 */
           home.packages = with pkgs; [
             tmux
-            unstable.kind
           ];
         };
       };
