@@ -20,7 +20,7 @@
           configuration = { config, lib, pkgs, ... }:
             let
               overlay-unstable = final: prev: {
-                unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+                unstable = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux;
               };
             in
             {
@@ -38,6 +38,8 @@
             };
         };
       };
+#    mudrii = self.homeConfigurations.mudrii.activationPackage;
+#    defaultPackage.x86_64-linux = self.mudrii;
     };
 }
 
