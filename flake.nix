@@ -42,9 +42,9 @@
                 SHELL = "bash";
                 MANPAGER = "nvim -c 'set ft=man' -";
                 TERM = "xterm-256color";
-#               file = {
-#                  ".config/nixpkgs/home.nix".source = dotfiles/home.nix;
-#               };
+                #               file = {
+                #                  ".config/nixpkgs/home.nix".source = dotfiles/home.nix;
+                #               };
               };
 
               programs = {
@@ -65,8 +65,8 @@
             };
         };
       };
-#    mudrii = self.homeConfigurations.mudrii.activationPackage;
-#    defaultPackage.x86_64-linux = self.mudrii;
+      #    mudrii = self.homeConfigurations.mudrii.activationPackage;
+      #    defaultPackage.x86_64-linux = self.mudrii;
     };
 }
 
