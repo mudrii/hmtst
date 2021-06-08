@@ -33,8 +33,6 @@
               ];
 
               home.packages = with pkgs; [
-                unstable.jq
-                tmux
               ];
 
               home.sessionVariables = {
@@ -48,20 +46,19 @@
               };
 
               programs = {
+                jq.enable = true;
+                tmux.enable = true;
                 fzf = {
                   enable = true;
                 };
-
                 direnv = {
                   enable = true;
                   enableNixDirenvIntegration = true;
                 };
-
                 bash = {
                   enable = true;
                 };
               };
-
             };
         };
       };
