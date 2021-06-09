@@ -3,7 +3,7 @@
 {
 
   imports = [
-
+    ./dotfiles/.tmux.conf.nix
   ];
 
   home = {
@@ -48,13 +48,11 @@
 
   programs = {
     home-manager.enable = true;
+    fzf.enable = true;
     jq.enable = true;
     bat.enable = true;
     tmux.enable = true;
     bash = {
-      enable = true;
-    };
-    fzf = {
       enable = true;
     };
     direnv = {
