@@ -110,7 +110,7 @@
         target = ".config/fish/functions/fish_greeting.fish";
       };
       fish_user_key_bindings = {
-        source = ./fish/fish_user_key_bindingsi.fish;
+        source = ./fish/fish_user_key_bindings.fish;
         target = ".config/fish/functions/fish_user_key_bindings.fish";
       };
     };
