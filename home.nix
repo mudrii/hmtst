@@ -52,9 +52,7 @@
     jq.enable = true;
     bat.enable = true;
     tmux.enable = true;
-    bash = {
-      enable = true;
-    };
+    bash.enable = true;
     direnv = {
       enable = true;
       enableNixDirenvIntegration = true;

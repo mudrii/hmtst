@@ -2,7 +2,7 @@
 
 {
 
-  home-manager.users.mudrii.home.file.".tmux.conf".text = ''
+  users.mudrii.home.file.".tmux.conf".text = ''
         source ${pkgs.python38Packages.powerline}/share/tmux/powerline.conf
 
         set-option -g default-shell "/run/current-system/sw/bin/fish"
@@ -49,7 +49,7 @@
         bind C-c new-session
 
         bind C-f command-prompt -p find-session 'switch-client -t %%'
-              
+
         bind - split-window -v
         bind \\ split-window -h
 
@@ -72,7 +72,7 @@
         bind -r C-h previous-window
         bind -r C-l next-window
         bind Tab last-window
-              
+
         set -g visual-bell on
         set -g bell-action any
 
