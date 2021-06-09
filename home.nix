@@ -4,6 +4,7 @@
 
   imports = [
     ./dotfiles/.tmux.conf.nix
+    ./dotfiles/.bash.nix
   ];
 
   home = {
@@ -41,9 +42,12 @@
       MANPAGER = "nvim -c 'set ft=man' -";
       TERM = "xterm-256color";
     };
-    #    file = {
-    #      ".config/nixpkgs/home.nix".source = dotfiles/home.nix;
-    #    };
+    file = {
+      git-completion = {
+        source = dotfiles/.git-completion.bash;
+        target = ".git-completion.bash";
+      };
+    };
   };
 
   programs = {
