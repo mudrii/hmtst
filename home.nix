@@ -8,9 +8,9 @@
 
   home = {
     packages = with pkgs; [
-      bat
       htop
       gtop
+      bpytop
       tree
       fzf
       file
@@ -20,6 +20,9 @@
       nix-index
       nodejs
       yarn
+      nixpkgs-fmt
+      pypi2nix
+      nodePackages.node2nix
     ];
     sessionVariables = {
       EDITOR = "nvim";
@@ -35,6 +38,7 @@
   programs = {
     home-manager.enable = true;
     jq.enable = true;
+    bat.enable = true;
     tmux.enable = true;
     bash = {
       enable = true;
