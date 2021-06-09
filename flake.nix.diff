@@ -20,23 +20,51 @@
           configuration = { config, lib, pkgs, ... }:
             let
               overlay-unstable = final: prev: {
-                unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+                unstable = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux;
               };
             in
             {
               nixpkgs.overlays = [ overlay-unstable ];
               nixpkgs.config = { allowUnfree = true; };
               programs.home-manager.enable = true;
-              /*
-                imports = [
-                ./modules/system-management/index.nix
-                ];
-              */
-              home.packages = with pkgs; [
-                tmux
+              imports = [
+                ./home.nix
+                #./modules/system-management/index.nix
               ];
+              /*
+                home.packages = with pkgs; [
+                ];
+
+                home.sessionVariables = {
+                EDITOR = "nvim";
+                SHELL = "bash";
+                MANPAGER = "nvim -c 'set ft=man' -";
+                TERM = "xterm-256color";
+                # file = {
+                #   ".config/nixpkgs/home.nix".source = dotfiles/home.nix;
+                #   };
+                };
+
+                programs = {
+                jq.enable = true;
+                tmux.enable = true;
+                fzf = {
+                enable = true;
+                };
+                direnv = {
+                enable = true;
+                enableNixDirenvIntegration = true;
+                };
+                fish = {
+                enable = true;
+
+                };
+                };
+              */
             };
         };
       };
+      #    mudrii = self.homeConfigurations.mudrii.activationPackage;
+      #    defaultPackage.x86_64-linux = self.mudrii;
     };
 }
