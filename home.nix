@@ -27,6 +27,7 @@
       nodejs
       yarn
       nixpkgs-fmt
+      unstable.direnv
       pypi2nix
       nodePackages.node2nix
       poetry
