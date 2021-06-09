@@ -47,7 +47,9 @@
         };
       }];
      loginShellInit = ''
-#     interactiveShellInit = ''
+       eval (direnv hook fish)
+    '';
+     interactiveShellInit = ''
       if type -q direnv
         function __direnv_export_eval --on-variable PWD
           status --is-command-substitution; and return
@@ -95,8 +97,6 @@
       set -x TERM xterm-256color
       set -x VISUAL nvim
       set -x EDITOR nvim
-
-      eval (direnv hook fish)
 
       function __fish_command_not_found_handler --on-event fish_command_not_found
         command-not-found $argv[1]
