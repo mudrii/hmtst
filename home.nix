@@ -45,11 +45,11 @@
     file = {
       git-completion = {
         source = dotfiles/.git-completion.bash;
-        target = "~/.git-completion.bash";
+        target = ".git-completion.bash";
       };
       git-prompt = {
         source = dotfiles/.git-prompt.sh;
-        target = "~/.git-prompt.sh";
+        target = ".git-prompt.sh";
       };
 
     };
