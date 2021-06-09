@@ -19,7 +19,6 @@
       nixops
       nix-index
       nix-deploy
-      python2nix
       nodejs
       yarn
       nodePackages.node2nix
