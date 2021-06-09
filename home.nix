@@ -13,9 +13,12 @@
       bpytop
       tree
       fzf
+      ripgrep
       file
       binutils
       fd
+      mosh
+      highlight
       nixops
       nix-index
       nodejs
@@ -23,6 +26,15 @@
       nixpkgs-fmt
       pypi2nix
       nodePackages.node2nix
+      poetry
+      python39Full
+      (python39.withPackages (ps: with ps; [
+        pip
+        powerline
+        pygments
+        pylint
+        pynvim
+      ]))
     ];
     sessionVariables = {
       EDITOR = "nvim";
