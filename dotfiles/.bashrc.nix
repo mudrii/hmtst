@@ -4,7 +4,7 @@
 
   programs.bash = {
     enable = true;
-    historyControl = [ "erasedups", "ignoredups", "ignorespace" ];
+    historyControl = [ "erasedups" "ignoredups" "ignorespace" ];
     historyFileSize = 1000000;
     historySize = 100000;
     initExtra = ''

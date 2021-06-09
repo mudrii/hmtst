@@ -45,7 +45,7 @@
     file = {
       git-completion = {
         source = dotfiles/.git-completion.bash;
-        target = ".git-completion.bash";
+        target = "~/.git-completion.bash";
       };
     };
   };
