@@ -23,7 +23,10 @@
             in
             {
               nixpkgs.overlays = [ overlay-unstable ];
-              nixpkgs.config = { allowUnfree = true; };
+              nixpkgs.config = {
+                allowUnfree = true;
+                allowBroken = true;
+              };
 
               imports = [
                 ./home.nix
