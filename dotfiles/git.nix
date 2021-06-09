@@ -28,7 +28,9 @@
       pp = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)";
       recent-branches = "branch --sort=-committerdate";
     };
-    core.editor = "nvim";
+    extraConfig = {
+      core.editor = "nvim";
+    };
   };
 
 }
