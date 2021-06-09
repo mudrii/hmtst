@@ -31,7 +31,7 @@
                 ./home.nix
                 #./modules/system-management/index.nix
               ];
-
+/*
               home.packages = with pkgs; [
               ];
 
@@ -63,6 +63,7 @@
 
                 };
               };
+*/
             };
         };
       };

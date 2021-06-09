@@ -2,27 +2,31 @@
 
 {
 
-  # Let Home Manager install and manage itself.
-  #  programs.home-manager.enable = true;
+  home = {
+#    packages = with pkgs; [ ];
+    sessionVariables = {
+      EDITOR = "nvim";
+      SHELL = "bash";
+      MANPAGER = "nvim -c 'set ft=man' -";
+      TERM = "xterm-256color";
+    };
+#    file = {
+#      ".config/nixpkgs/home.nix".source = dotfiles/home.nix;
+#    };
 
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
-  #  home.username = "mudrii";
-  #  home.homeDirectory = "/home/mudrii";
+  programs = {
+    jq.enable = true;
+    tmux.enable = true;
+    fzf = {
+      enable = true;
+    };
+    direnv = {
+      enable = true;
+      enableNixDirenvIntegration = true;
+    };
+    fish = {
+      enable = true;
+    };
+  };
 
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  #  home.stateVersion = "21.05";
-  /*
-    home.packages = with pkgs; [
-    unstable.jq
-    tmux
-    ];
-  */
 }
