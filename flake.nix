@@ -46,10 +46,6 @@
               };
 
               programs = {
-                gnupg.agent = {
-                  enable = true;
-                  enableSSHSupport = true;
-                };
                 jq.enable = true;
                 tmux.enable = true;
                 fzf = {
