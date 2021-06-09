@@ -31,39 +31,36 @@
                 ./home.nix
                 #./modules/system-management/index.nix
               ];
-/*
-              home.packages = with pkgs; [
-              ];
+              /*
+                home.packages = with pkgs; [
+                ];
 
-              home.sessionVariables = {
+                home.sessionVariables = {
                 EDITOR = "nvim";
                 SHELL = "bash";
                 MANPAGER = "nvim -c 'set ft=man' -";
                 TERM = "xterm-256color";
-                #               file = {
-                #                  ".config/nixpkgs/home.nix".source = dotfiles/home.nix;
-                #               };
-              };
+                # file = {
+                #   ".config/nixpkgs/home.nix".source = dotfiles/home.nix;
+                #   };
+                };
 
-              programs = {
+                programs = {
                 jq.enable = true;
                 tmux.enable = true;
                 fzf = {
-                  enable = true;
+                enable = true;
                 };
                 direnv = {
-                  enable = true;
-                  enableNixDirenvIntegration = true;
+                enable = true;
+                enableNixDirenvIntegration = true;
                 };
-                #bash = {
-                #  enable = true;
-                #};
                 fish = {
-                  enable = true;
+                enable = true;
 
                 };
-              };
-*/
+                };
+              */
             };
         };
       };
@@ -71,4 +68,3 @@
       #    defaultPackage.x86_64-linux = self.mudrii;
     };
 }
-
