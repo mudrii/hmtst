@@ -4,7 +4,7 @@
 
   imports = [
     ./dotfiles/.tmux.conf.nix
-    ./dotfiles/.bash.nix
+    ./dotfiles/.bashrc.nix
   ];
 
   home = {
