@@ -3,10 +3,26 @@
 {
 
   home = {
-    #    packages = with pkgs; [ ];
+    packages = with pkgs; [
+      bat
+      htop
+      gtop
+      tree
+      fzf
+      file
+      binutils
+      fd
+      nixops
+      nix-index
+      nix-deploy
+      python2nix
+      nodejs
+      yarn
+      nodePackages.node2nix
+    ];
     sessionVariables = {
       EDITOR = "nvim";
-      SHELL = "bash";
+      SHELL = "fish";
       MANPAGER = "nvim -c 'set ft=man' -";
       TERM = "xterm-256color";
     };
@@ -19,6 +35,9 @@
     home-manager.enable = true;
     jq.enable = true;
     tmux.enable = true;
+    bash = {
+      enable = true;
+    }:
     fzf = {
       enable = true;
     };
@@ -31,10 +50,13 @@
     };
   };
 
-  services.gpg-agent = {
-    enable = true;
-    defaultCacheTtl = 1800;
-    enableSshSupport = true;
+  services = {
+    lorri.enable = true;
+    gpg-agent = {
+      enable = true;
+      defaultCacheTtl = 1800;
+      enableSshSupport = true;
+    };
   };
 
 }
