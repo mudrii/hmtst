@@ -102,4 +102,17 @@
       end
     '';
   };
+
+  home = {
+    file = {
+      fish_greeting = {
+        source = ./fish/fish_greeting.fish;
+        target = ".config/fish/functions/fish_greeting.fish";
+      };
+      fish_user_key_bindings = {
+        source = ./fish/fish_user_key_bindingsi.fish;
+        target = ".config/fish/functions/fish_user_key_bindings.fish";
+      };
+    };
+  };
 }
