@@ -18,10 +18,8 @@
       fd
       nixops
       nix-index
-      nix-deploy
       nodejs
       yarn
-      nodePackages.node2nix
     ];
     sessionVariables = {
       EDITOR = "nvim";
