@@ -24,6 +24,7 @@
         gadcm = "git add -A; and git commit";
         gad = "git add .";
         gcm = "git commit";
+        gch = "git checkout";
         gdf = "git diff";
         gl = "git log";
         glg = "git log --color --graph --pretty --oneline";
