@@ -16,6 +16,7 @@
   };
 
   programs = {
+    home-manager.enable = true;
     jq.enable = true;
     tmux.enable = true;
     fzf = {

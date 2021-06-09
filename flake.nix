@@ -24,7 +24,7 @@
             {
               nixpkgs.overlays = [ overlay-unstable ];
               nixpkgs.config = { allowUnfree = true; };
-              programs.home-manager.enable = true;
+
               imports = [
                 ./home.nix
               ];
