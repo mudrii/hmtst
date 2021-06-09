@@ -27,8 +27,8 @@
       pypi2nix
       nodePackages.node2nix
       poetry
-      python39Full
-      (python39.withPackages (ps: with ps; [
+      python38Full
+      (python38.withPackages (ps: with ps; [
         pip
         powerline
         pygments
