@@ -46,6 +46,10 @@
               };
 
               programs = {
+                gnupg.agent = {
+                  enable = true;
+                  enableSSHSupport = true;
+                };
                 jq.enable = true;
                 tmux.enable = true;
                 fzf = {
@@ -55,8 +59,12 @@
                   enable = true;
                   enableNixDirenvIntegration = true;
                 };
-                bash = {
+                #bash = {
+                #  enable = true;
+                #};
+                fish = {
                   enable = true;
+
                 };
               };
             };
