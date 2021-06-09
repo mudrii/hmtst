@@ -46,7 +46,8 @@
           sha256 = "zUngqEZgHLmlyvoiVO3MwJTSFsYD7t3XiP6yMzmMkBs=";
         };
       }];
-     interactiveShellInit = ''
+     loginShellInit = ''
+#     interactiveShellInit = ''
       if type -q direnv
         function __direnv_export_eval --on-variable PWD
           status --is-command-substitution; and return
