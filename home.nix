@@ -37,23 +37,6 @@
         pynvim
       ]))
     ];
-    sessionVariables = {
-      EDITOR = "nvim";
-      SHELL = "fish";
-      MANPAGER = "nvim -c 'set ft=man' -";
-      TERM = "xterm-256color";
-    };
-    file = {
-      git-completion = {
-        source = dotfiles/.git-completion.bash;
-        target = ".git-completion.bash";
-      };
-      git-prompt = {
-        source = dotfiles/.git-prompt.sh;
-        target = ".git-prompt.sh";
-      };
-
-    };
   };
 
   programs = {
