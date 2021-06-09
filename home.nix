@@ -5,6 +5,7 @@
   imports = [
     ./dotfiles/.tmux.conf.nix
     ./dotfiles/.bashrc.nix
+    ./dotfiles/config.fish.nix
   ];
 
   home = {
@@ -61,8 +62,6 @@
     jq.enable = true;
     bat.enable = true;
     tmux.enable = true;
-    bash.enable = true;
-    fish.enable = true;
     direnv = {
       enable = true;
       enableNixDirenvIntegration = true;
