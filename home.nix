@@ -6,6 +6,7 @@
     ./dotfiles/.tmux.conf.nix
     ./dotfiles/.bashrc.nix
     ./dotfiles/config.fish.nix
+    ./dotfiles/git.nix
   ];
 
   home = {
