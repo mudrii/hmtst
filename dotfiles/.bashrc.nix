@@ -51,11 +51,11 @@
   home = {
     file = {
       git-completion = {
-        source = dotfiles/.git-completion.bash;
+        source = ./.git-completion.bash;
         target = ".git-completion.bash";
       };
       git-prompt = {
-        source = dotfiles/.git-prompt.sh;
+        source = ./.git-prompt.sh;
         target = ".git-prompt.sh";
       };
     };
