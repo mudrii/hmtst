@@ -41,7 +41,7 @@
     tmux.enable = true;
     bash = {
       enable = true;
-    }:
+    };
     fzf = {
       enable = true;
     };
