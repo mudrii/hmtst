@@ -53,12 +53,10 @@
     bat.enable = true;
     tmux.enable = true;
     bash.enable = true;
+    fish.enable = true;
     direnv = {
       enable = true;
       enableNixDirenvIntegration = true;
-    };
-    fish = {
-      enable = true;
     };
     neovim = {
       enable = true;
