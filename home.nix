@@ -46,10 +46,10 @@
     jq.enable = true;
     bat.enable = true;
     tmux.enable = true;
-    direnv = {
-      enable = true;
-      enableNixDirenvIntegration = true;
-    };
+#    direnv = {
+#      enable = true;
+#      enableNixDirenvIntegration = true;
+#    };
     neovim = {
       enable = true;
       vimAlias = true;
