@@ -15,7 +15,7 @@
       gtop
       bpytop
       tree
-      fzf
+#      fzf
       ripgrep
       file
       binutils
