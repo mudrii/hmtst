@@ -11,7 +11,6 @@
 
   home = {
     packages = with pkgs; [
-      htop
       gtop
       bpytop
       tree
@@ -46,6 +45,14 @@
     jq.enable = true;
     bat.enable = true;
     tmux.enable = true;
+    command-not-found.enable = true;
+    dircolors.enable = true;
+    htop.enable = true;
+    info.enable = true;
+    exa = {
+      enable = true;
+      enableAliases = true;
+    };
 #    direnv = {
 #      enable = true;
 #      enableNixDirenvIntegration = true;
