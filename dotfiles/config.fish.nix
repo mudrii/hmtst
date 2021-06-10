@@ -16,7 +16,9 @@
       gpl = "git pull";
       gps = "git push";
       gst = "git status";
-      lq = "exa -alg --group-directories-first -s=type --icons";
+      la = "exa --long --all --group --header --group-directories-first --sort=type --icons";
+      lg = "exa --long --all --group --header --tree --git";
+      lt = "exa --long --all --group --header --tree --level ";
       lless = "set -gx LESSOPEN '|pygmentize -f terminal256 -g -P style=monokai %s' && set -gx LESS '-R' && less -m -g -i -J -u -Q";
       rm = "trash-put";
       unrm = "trash-restore";

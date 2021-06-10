@@ -48,10 +48,7 @@
     dircolors.enable = true;
     htop.enable = true;
     info.enable = true;
-    exa = {
-      enable = true;
-      enableAliases = true;
-    };
+    exa.enable = true;
 #    direnv = {
 #      enable = true;
 #      enableNixDirenvIntegration = true;
