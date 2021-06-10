@@ -47,6 +47,9 @@
         sudo = "sudo -i";
         suf = "su --shell=/usr/bin/fish";
         vdir = "vdir --color=auto";
+        ossw = "sudo nixos-rebuild switch --flake '/etc/nixos/#nixtst' -v";
+        hmsw = "home-manager switch --flake ~/.config/nixpkgs/#mudrii";
+        ohup = "nix flake update ~/.config/nixpkgs -v && sudo nix flake update '/etc/nixos/' -v";
       };
     };
 

@@ -15,7 +15,7 @@
           homeDirectory = "/home/mudrii";
           username = "mudrii";
           stateVersion = "21.05";
-          configuration = { config, lib, pkgs, ... }:
+          configuration = { config, pkgs, ... }:
             let
               overlay-unstable = final: prev: {
                 unstable = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux;
