@@ -14,14 +14,13 @@
       gtop
       bpytop
       tree
-#      fzf
       ripgrep
       file
       binutils
       fd
+      trash-cli
       mosh
       highlight
-      nixops
       nix-index
       nodejs
       yarn

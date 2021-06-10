@@ -17,13 +17,9 @@
       '';
       shellAliases = {
         ccat = "pygmentize -f terminal256 -g -P style=monokai";
-        cp = "cp -i";
-        diff = "diff --color=auto";
+        diff = "diff --color=auto | lless";
         dmesg = "dmesg --color=always | lless";
-        egrep = "egrep --color=auto";
-        fgrep = "fgrep --color=auto";
-        grep = "grep --color=auto";
-        gadcm = "git add -A; and git commit";
+        gadc = "git add -A; and git commit";
         gad = "git add .";
         gcm = "git commit";
         gch = "git checkout";
@@ -33,20 +29,12 @@
         gpl = "git pull";
         gps = "git push";
         gst = "git status";
-        la = "exa -alg --group-directories-first -s=type --icons";
+        lq = "exa -alg --group-directories-first -s=type --icons";
         lless = "set -gx LESSOPEN '|pygmentize -f terminal256 -g -P style=monokai %s' && set -gx LESS '-R' && less -m -g -i -J -u -Q";
-        ll = "exa -la";
-        ls = "exa";
-        mv = "mv -i";
-        ping = "ping -c3";
-        ps = "ps -ef";
         rm = "trash-put";
         unrm = "trash-restore";
         rmcl = "trash-empty";
         rml = "trash-list";
-        sudo = "sudo -i";
-        suf = "su --shell=/usr/bin/fish";
-        vdir = "vdir --color=auto";
         ossw = "sudo nixos-rebuild switch --flake '/etc/nixos/#nixtst' -v";
         hmsw = "home-manager switch --flake ~/.config/nixpkgs/#mudrii";
         ohup = "nix flake update ~/.config/nixpkgs -v && sudo nix flake update '/etc/nixos/' -v";
