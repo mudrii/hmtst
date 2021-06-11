@@ -11,6 +11,8 @@
 
   home = {
     packages = with pkgs; [
+      google-cloud-sdk-gce
+      pulumi-bin
       gtop
       bpytop
       tree
