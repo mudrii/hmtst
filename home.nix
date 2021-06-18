@@ -42,6 +42,7 @@
 
   programs = {
     home-manager.enable = true;
+    gpg.enable = true;
     fzf.enable = true;
     jq.enable = true;
     bat.enable = true;
@@ -97,7 +98,6 @@
     lorri.enable = true;
     gpg-agent = {
       enable = true;
-      defaultCacheTtl = 1800;
       enableSshSupport = true;
     };
   };
