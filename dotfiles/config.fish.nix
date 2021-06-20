@@ -28,6 +28,7 @@
       ossw = "sudo nixos-rebuild switch --flake '/etc/nixos/#nixtst' -v";
       hmsw = "home-manager switch --flake ~/.config/nixpkgs/#mudrii";
       upa = "nix flake update ~/.config/nixpkgs -v && sudo nix flake update '/etc/nixos/' -v";
+      fusw = "upa && ossw && hmsw";
     };
     plugins = [{
         name = "bobthefish";
