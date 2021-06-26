@@ -11,6 +11,7 @@
 
   home = {
     packages = with pkgs; [
+      unstable.code-server
       google-cloud-sdk-gce
       pulumi-bin
       gtop
@@ -38,6 +39,13 @@
         pynvim
       ]))
     ];
+
+    file = {
+      code-server = {
+        source = ./dotfiles/code-server-config.yaml;
+        target = ".config/code-server/config.yaml";
+      };
+    };
   };
 
   programs = {
