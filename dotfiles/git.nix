@@ -31,6 +31,22 @@
       };
       extraConfig = {
         core.editor = "nvim";
+        pull.rebase = true;
+        remote = {
+          push = [
+            "refs/heads/*:refs/heads/*"
+            "refs/tags/*:refs/tags/*"
+          ];
+          fetch = [
+            "refs/heads/*:refs/remotes/origin/*"
+            "refs/tags/*:refs/tags/*"
+          ];
+        };
+        rebase = {
+          stat = true;
+          autoSquash = true;
+          autostash = true;
+        };
       };
     };
   };
