@@ -5,6 +5,7 @@
   programs = {
     git = {
       enable = true;
+      lfs.enable = true;
       userName = "mudrii";
       userEmail = "mudreac@gmail.com";
       ignores = [ "*~" "*.swp" ];
@@ -31,6 +32,10 @@
       };
       extraConfig = {
         core.editor = "nvim";
+        status = { showUntrackedFiles = "all"; };
+        credential."https://github.com" = {
+          helper = "!${pkgs.gh}/bin/gh auth git-credential";
+        };
         pull.rebase = true;
         remote = {
           push = [
