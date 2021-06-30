@@ -11,7 +11,7 @@
 
   home = {
     packages = with pkgs; [
-      unstable.code-server
+#      unstable.code-server
       google-cloud-sdk-gce
       pulumi-bin
       gtop
@@ -46,6 +46,7 @@
         target = ".config/code-server/config.yaml";
       };
     };
+
   };
 
   programs = {
