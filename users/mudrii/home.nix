@@ -3,17 +3,18 @@
 {
 
   imports = [
-    ./dotfiles/.tmux.conf.nix
-    ./dotfiles/.bashrc.nix
-    ./dotfiles/config.fish.nix
+    ./dotfiles/bashrc.nix
+    ./dotfiles/fish.nix
     ./dotfiles/git.nix
+    ./dotfiles/tmux.nix
+#    ../../services/nixos-vscode-ssh-fix.nix
+#    ../../services/nixos-hm-auto-update.nix
   ];
+
+  fonts.fontconfig.enable = true;
 
   home = {
     packages = with pkgs; [
-#      unstable.code-server
-      google-cloud-sdk-gce
-      pulumi-bin
       gtop
       bpytop
       tree
@@ -25,28 +26,24 @@
       mosh
       highlight
       nix-index
-      nodejs
       yarn
       nixpkgs-fmt
+      nixpkgs-review
       pypi2nix
       nodePackages.node2nix
-      poetry
-      (python38.withPackages (ps: with ps; [
+      #poetry
+      unstable.python39Packages.poetry
+      (python39.withPackages (ps: with ps; [
         pip
         powerline
         pygments
         pylint
         pynvim
       ]))
+      corefonts
+      powerline-fonts
+      nerdfonts
     ];
-
-    file = {
-      code-server = {
-        source = ./dotfiles/code-server-config.yaml;
-        target = ".config/code-server/config.yaml";
-      };
-    };
-
   };
 
   programs = {
@@ -55,16 +52,18 @@
     fzf.enable = true;
     jq.enable = true;
     bat.enable = true;
-    tmux.enable = true;
     command-not-found.enable = true;
     dircolors.enable = true;
     htop.enable = true;
     info.enable = true;
     exa.enable = true;
-#    direnv = {
-#      enable = true;
-#      enableNixDirenvIntegration = true;
-#    };
+    direnv = {
+      enable = true;
+      nix-direnv = {
+        enable = true;
+        enableFlakes = true;
+      };
+    };
     neovim = {
       enable = true;
       vimAlias = true;
@@ -105,6 +104,8 @@
 
   services = {
     lorri.enable = true;
+    nixos-vscode-ssh-fix.enable = true;
+    nixos-hm-auto-update.enable = true;
     gpg-agent = {
       enable = true;
       enableSshSupport = true;

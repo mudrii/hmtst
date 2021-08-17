@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration";
+  description = "Home Manager NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
@@ -29,12 +29,12 @@
               };
 
               imports = [
-                ./home.nix
+                ./users/mudrii/home.nix
               ];
             };
         };
       };
-      #    mudrii = self.homeConfigurations.mudrii.activationPackage;
-      #    defaultPackage.x86_64-linux = self.mudrii;
+          mudrii = self.homeConfigurations.mudrii.activationPackage;
+          defaultPackage.x86_64-linux = self.mudrii;
     };
 }
