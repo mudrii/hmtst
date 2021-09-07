@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
 
@@ -7,14 +7,21 @@
     ./dotfiles/fish.nix
     ./dotfiles/git.nix
     ./dotfiles/tmux.nix
-#    ../../services/nixos-vscode-ssh-fix.nix
-#    ../../services/nixos-hm-auto-update.nix
   ];
 
   fonts.fontconfig.enable = true;
 
   home = {
     packages = with pkgs; [
+      sshfs
+      asciinema
+      aspell
+      aspellDicts.en
+      tldr
+      procs
+      gitAndTools.gh
+      git-crypt
+      git-lfs
       gtop
       bpytop
       tree
@@ -40,9 +47,6 @@
         pylint
         pynvim
       ]))
-      corefonts
-      powerline-fonts
-      nerdfonts
     ];
   };
 
@@ -57,6 +61,7 @@
     htop.enable = true;
     info.enable = true;
     exa.enable = true;
+
     direnv = {
       enable = true;
       nix-direnv = {
@@ -64,6 +69,7 @@
         enableFlakes = true;
       };
     };
+
     neovim = {
       enable = true;
       vimAlias = true;
@@ -99,13 +105,11 @@
         unstable.vimPlugins.vim-commentary
         unstable.vimPlugins.undotree
       ];
-   };
+    };
   };
 
   services = {
     lorri.enable = true;
-    nixos-vscode-ssh-fix.enable = true;
-    nixos-hm-auto-update.enable = true;
     gpg-agent = {
       enable = true;
       enableSshSupport = true;

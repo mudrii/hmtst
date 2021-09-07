@@ -6,8 +6,8 @@
     git = {
       enable = true;
       lfs.enable = true;
-      userName = "mudrii";
-      userEmail = "mudreac@gmail.com";
+      userName = "Ion Mudreac";
+      userEmail = "ion.mudreac@singtel.com";
       ignores = [ "*~" "*.swp" ];
       aliases = {
         unstage = "reset HEAD --";
