@@ -44,7 +44,6 @@
         pip
         powerline
         pygments
-        pylint
         pynvim
       ]))
     ];
