@@ -38,7 +38,6 @@
       nixpkgs-review
       pypi2nix
       nodePackages.node2nix
-      #poetry
       unstable.python39Packages.poetry
       (python39.withPackages (ps: with ps; [
         pip
