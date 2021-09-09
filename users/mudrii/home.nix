@@ -67,7 +67,7 @@
         enableFlakes = true;
       };
     };
-
+  };
 
   services = {
     lorri.enable = true;
