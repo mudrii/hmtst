@@ -26,7 +26,7 @@
       rml = "trash-list";
       vdir = "vdir --color=auto";
       ossw = "sudo nixos-rebuild switch --flake '/etc/nixos/#nixtst' --impure -v";
-      hmsw = "home-manager switch --flake ~/.config/nixpkgs/#mudrii";
+      hmsw = "home-manager switch --flake ~/.config/nixpkgs/#$USER";
       upa = "nix flake update ~/.config/nixpkgs -v && sudo nix flake update '/etc/nixos/' -v";
       fusw = "upa && ossw && hmsw";
       rusw = "ossw && hmsw";
