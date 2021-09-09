@@ -7,6 +7,7 @@
     ./dotfiles/fish.nix
     ./dotfiles/git.nix
     ./dotfiles/tmux.nix
+    ./dotfiles/neovim.nix
   ];
 
   fonts.fontconfig.enable = true;
