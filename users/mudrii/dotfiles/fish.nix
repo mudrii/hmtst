@@ -35,20 +35,19 @@
       acl = "ucl && scl";
     };
     plugins = [{
-        name = "bobthefish";
-        src = pkgs.fetchFromGitHub {
-          owner = "oh-my-fish";
-          repo = "theme-bobthefish";
-          rev = "626bd39b002535d69e56adba5b58a1060cfb6d7b";
-#          sha256 = lib.fakeSha256;
-          sha256 = "zUngqEZgHLmlyvoiVO3MwJTSFsYD7t3XiP6yMzmMkBs=";
-        };
-      }];
-     loginShellInit = ''
-       direnv hook fish | source
+      name = "bobthefish";
+      src = pkgs.fetchFromGitHub {
+        owner = "oh-my-fish";
+        repo = "theme-bobthefish";
+        rev = "626bd39b002535d69e56adba5b58a1060cfb6d7b";
+#        sha256 = lib.fakeSha256;
+        sha256 = "zUngqEZgHLmlyvoiVO3MwJTSFsYD7t3XiP6yMzmMkBs=";
+      };
+    }];
+    loginShellInit = ''
+      direnv hook fish | source
     '';
-     interactiveShellInit = ''
-
+    interactiveShellInit = ''
       set -g theme_display_git yes
       set -g theme_display_git_dirty yes
       set -g theme_display_git_untracked yes
@@ -79,9 +78,7 @@
       set -g theme_color_scheme dark
       set -g fish_prompt_pwd_dir_length 0
       set -g theme_project_dir_length 1
-
       set -g direnv_fish_mode eval_on_arrow
-
       set --universal fish_greeting
       set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
       set -x PAGER less
@@ -90,7 +87,7 @@
       set -x VISUAL nvim
       set -x EDITOR nvim
     '';
-  };
+  }; 
 
   home = {
     file = {
