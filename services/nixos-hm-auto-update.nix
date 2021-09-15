@@ -23,7 +23,7 @@ with lib;
        set -euo pipefail
        PATH=/run/current-system/sw/bin:
        cd ~/.config/nixpkgs
-       ${gitPath} pull origin main
+       ${gitPath} pull origin master
        $HOME/.nix-profile/bin/home-manager switch --flake ".#$USER" -v
      '';
    in
