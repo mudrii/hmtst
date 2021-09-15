@@ -8,6 +8,9 @@
     ./dotfiles/git.nix
     ./dotfiles/tmux.nix
     ./dotfiles/neovim.nix
+../../services/nixos-vscode-ssh-fix.nix
+  ../../services/nixos-hm-auto-update.nix
+    
   ];
 
   fonts.fontconfig.enable = true;
@@ -71,6 +74,9 @@
   };
 
   services = {
+nixos-hm-auto-update.enable = true;
+
+    nixos-vscode-ssh-fix.enable = true;
     lorri.enable = true;
     gpg-agent = {
       enable = true;
