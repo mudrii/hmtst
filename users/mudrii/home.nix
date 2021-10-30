@@ -27,6 +27,7 @@
       git-crypt
       git-lfs
       gtop
+      unstable.btop
       bpytop
       tree
       ripgrep
