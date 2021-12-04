@@ -8,9 +8,8 @@
     ./dotfiles/git.nix
     ./dotfiles/tmux.nix
     ./dotfiles/neovim.nix
-../../services/nixos-vscode-ssh-fix.nix
-  ../../services/nixos-hm-auto-update.nix
-    
+    ../../services/nixos-vscode-ssh-fix.nix
+    ../../services/nixos-hm-auto-update.nix
   ];
 
   fonts.fontconfig.enable = true;
@@ -44,6 +43,7 @@
       pypi2nix
       nodePackages.node2nix
       unstable.python39Packages.poetry
+
       (python39.withPackages (ps: with ps; [
         pip
         powerline
@@ -75,7 +75,7 @@
   };
 
   services = {
-nixos-hm-auto-update.enable = true;
+    nixos-hm-auto-update.enable = true;
 
     nixos-vscode-ssh-fix.enable = true;
     lorri.enable = true;
